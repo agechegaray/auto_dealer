@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Roadway Car Auto</title>
+    <meta name="description" content="Auto Dealer Assignment">
+    <meta name="author" content="Agustina Echegaray">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Fav Icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+<div id="headerWrapper">
+	<header>
+        <img src="images/logo1x.png" width="100" height="81" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" alt="logo">
+        <a href="tel:+1234567890">+1 (234) 567-890</a>
+    </header>
+</div><!-- end header wrapper -->
+
+<div id="navWrapper">
+    <nav id="theNav">
+        <button id="theButton"></button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li class="active"><a href="#">Services</a></li>
+            <li><a href="#">Prices</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+<div id="mainWrapper">
+    <main>
+        <div class="parentHeroCar">
+            <img src="images/car_hero_image.jpg" width="5999" height="3169" alt="car hero image">
+            <p>Drive Your Adventure.</p>
+        </div>
+
+        <h1>Services</h1>
+        
+        <div class="allCards">
+            <section class="bounce">
+                <img src="images/oil_icon.jpg" width="100px" height="90px" alt="oil change and maintenance icon">
+                <h2>Oil Chance and Maintenance</h2>
+                <p>Keep your engine running smoothly with our quick and reliable oil change services. 
+                    Our team uses top-quality oil and filters to ensure your car stays in peak condition.</p>
+                <a href="#">Learn More</a>
+            </section>
+
+            <section class="bounce">
+                <img src="images/brake_icon.jpg" width="100px" height="90px" alt="brake inspection and repair icon">
+                <h2>Brake Inspection and Repair</h2>
+                <p>Ensure your safety with a thorough brake inspection. We offer comprehensive brake repairs 
+                    and replacements to keep your vehicle stopping efficiently and safely.</p>
+                <a href="#">Learn More</a>
+            </section>
+
+            <section class="bounce">
+                <img src="images/tire_icon.svg" width="100px" height="100px" alt="tire services and alignment icon">
+                <h2>Tire Services and Alignment</h2>
+                <p>From tire rotation to full replacements, we provide expert tire care. Our alignment services 
+                    will make sure your vehicle drives straight and extends the life of your tires.</p>
+                <a href="#">Learn More</a>
+            </section>
+
+            <section class="bounce">
+                <img src="images/engine_icon.svg" width="100px" height="100px" alt="engine diagnostics and repair icon">
+                <h2>Engine Diagnostics and Repair</h2>
+                <p>Is your check engine light on? Our advanced diagnostics will identify the issue, and our 
+                    experienced technicians will get your vehicle running smoothly again.</p>
+                <a href="#">Learn More</a>
+            </section>
+        </div>
+
+        <div class="reviewWrapper">
+            <h2>Reviews</h2>
+            <div id="reviewCards"></div>
+        </div>
+
+        <div></div>
+    </main>
+</div><!-- end main wrapper -->
+    
+<div id="footerWrapper">
+    <footer>
+        <p class="legal">&copy; <span id="year">x</span> &bull; Auto Dealer &bull; Agustina Echegaray</p>
+    </footer>
+</div> <!-- end footer wrapper -->
+<script src="js/scripts.js" type="module"></script>
+</body>
+</html> 

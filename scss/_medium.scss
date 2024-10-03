@@ -1,0 +1,28 @@
+/* NAVIGATION STUFF GOES HERE  */
+#theButton {
+    display: none;
+}
+
+#theNav {
+    grid-template-rows: 1fr;
+}
+
+#theNav ul, #theNav ul.open {
+    display: flex;
+    background-color: black;
+    li a {
+        padding: 1rem 1rem;
+        border: none;
+    }
+}
+
+main {
+    div.allCards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gutter;
+        section {
+            flex-basis: calc(50% - ($gutter/2));
+        }
+    }
+}

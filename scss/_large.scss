@@ -1,0 +1,11 @@
+/* NAVIGATION STUFF GOES HERE  */
+main {
+    div.allCards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $gutter;
+        section {
+            flex-basis: calc(25% - ($gutter * 3/4));
+        }
+    }
+}

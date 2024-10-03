@@ -1,0 +1,220 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $primaryColor}
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    padding-top: 2rem;
+    img {
+        padding-bottom: 1.5rem;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        text-align: right;
+    }
+} // end header
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+#theButton::before {
+    content: "\2630";
+}
+
+#theButton {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#theNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li a {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+        display: block;
+        padding: 1rem $gutter;
+        text-decoration: none;
+        border-bottom: 1px solid $secondaryColor;
+    }
+    li a:hover {
+        background-color: $tertiaryColor
+    }
+    li.active a {
+        color: $secondaryColor;
+        background-color: #a30000;
+    }
+}
+
+#theButton.open::before {
+    content: "\2715";
+}
+
+#theNav{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-row 0.5s ease-out;
+    ul {
+        overflow: hidden;
+    }
+}
+
+#theNav.open {
+    grid-template-rows: 1fr;
+}
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    .parentHeroCar {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        p {
+            position: absolute;
+            margin: 0;
+            top: 35%;
+            left: 20px;
+            width: 90%;
+            text-align: left;
+            color: white;
+            font-size: 3rem;
+        }
+    }
+    h1 {
+        margin: 1rem;
+        font-weight: $normalWeight;
+    }
+    div.allCards {
+        padding: 0 $gutter;
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0rem;
+            padding: 1rem;
+        }
+        img {
+            position: relative;
+        }
+        .bounce:hover img {animation: myBounce 1s 1;}
+            @keyframes myBounce {
+                0% {bottom:0px; animation-timing-function:ease-out;}
+                25% {bottom:15px; animation-timing-function:ease-in;}
+                50% {bottom:0px; animation-timing-function:ease-out;}
+                75% {bottom:7px; animation-timing-function:ease-in;}
+                100% {bottom:0px; animation-timing-function:ease-out;}
+            }
+        h2, p, a {
+            text-align: center;
+        }
+        a {
+            display: block;
+            background-color: $tertiaryColor;
+            color: $secondaryColor;
+            padding: 1rem 2rem;
+            margin: 0 3rem 1rem 3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: $normalWeight;
+        }
+    }
+        
+    .reviewWrapper {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .reviewWrapper h2 {
+        margin: 1rem;
+        font-size: 2rem;
+        font-weight: $lightWeight;
+    }
+
+    #reviewCards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    #reviewCards section {
+        flex: 1 1 calc(25% - 1rem);
+        min-width: 250px;
+        border: 1px solid $tertiaryColor;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-rating {
+        margin-bottom: 0.75rem;
+        display: flex;
+    }
+
+    .star-icon {
+        width: 16px;
+        height: auto;
+        margin-right: 4px;
+    }
+
+    #reviewCards p {
+        font-size: 0.875rem;
+        color: #333;
+        line-height: 1.5;
+    }
+} // end main
+
+
+/* --------------------------- FOOTER --------------------------- */
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    text-align: center;
+}// end footer
