@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             for (let step = 0; step < reviews[x].stars; step++) {
                 const myStars = document.createElement('img');
-                myStars.src = "../images/star_icon.svg";
+                myStars.src = "./images/star_icon.svg";
                 myStars.alt = "star rating";
                 myStars.classList.add('star-icon');
                 myRating.appendChild(myStars);
